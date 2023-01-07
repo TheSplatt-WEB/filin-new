@@ -508,12 +508,6 @@ button:active {
   }
 }
 
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .social__list {
   display: flex;
   justify-content: center;
@@ -749,6 +743,10 @@ button:active {
   margin-right: 20px;
   transition: transform 0.3s, width 0.3s;
   display: block;
+}
+
+.header__logo picture {
+  pointer-events: none;
 }
 
 .header__img {
