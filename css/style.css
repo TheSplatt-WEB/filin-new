@@ -1989,16 +1989,29 @@ button:active {
   text-transform: uppercase;
   margin-bottom: 30px;
   font-size: 18px;
-  text-align: center;
+  text-align: right;
 }
 
 .judicial-practice__wrapper {
   display: flex;
+  position: relative;
+}
+
+.judicial-practice__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  border-top: 2.5px solid var(--red);
 }
 
 .judicial-practice__content {
   flex: 1 1 auto;
   position: relative;
+  padding-top: 45px;
 }
 
 .judicial-practice__tab {
@@ -2028,7 +2041,7 @@ button:active {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 0 6px 0 0;
+  border-radius: 0 0 10px 0;
   box-shadow: inset 0 0 0 250px rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
@@ -2038,13 +2051,13 @@ button:active {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: 0;
 }
 
 .judicial-practice__item::before {
   height: 3px;
   width: 100%;
-  border-bottom: 2.5px solid var(--red);
+  border-top: 2.5px solid var(--red);
 }
 
 .judicial-practice__item::after {
@@ -2113,13 +2126,24 @@ button:active {
   width: 330px;
   flex: 0 0 330px;
   padding-right: 15px;
+  margin-right: 15px;
+  position: relative;
+}
+
+.judicial-aside::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 3px;
+  height: calc(100% - 30px);
+  border-right: 2.5px solid var(--red);
 }
 
 .judicial-aside__title {
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 20px;
-  border-bottom: 2.5px solid var(--red);
   margin-right: -15px;
   padding-right: 15px;
 }
@@ -3045,9 +3069,18 @@ button:active {
     display: block;
   }
 
+  .judicial-practice__content {
+    padding-top: 0;
+  }
+
   .judicial-aside {
     width: auto;
     padding-right: 0;
+    margin-right: 0;
+  }
+
+  .judicial-aside::before {
+    display: none;
   }
 
   .judicial-aside__title {
@@ -3062,7 +3095,7 @@ button:active {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .judicial-aside__item:not(:last-child) {
