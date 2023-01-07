@@ -1987,7 +1987,6 @@ button:active {
   margin-bottom: 30px;
   font-size: 18px;
   text-align: center;
-  border-bottom: 0.5px solid var(--red);
 }
 
 .judicial-practice__wrapper {
@@ -2093,6 +2092,9 @@ button:active {
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 20px;
+  border-bottom: 0.5px solid var(--red);
+  margin-right: -15px;
+  padding-right: 15px;
 }
 
 .judicial-aside__item:not(:last-child) {
@@ -3019,6 +3021,13 @@ button:active {
   .judicial-aside {
     width: auto;
     padding-right: 0;
+  }
+
+  .judicial-aside__title {
+    padding-right: 0;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto 20px;
   }
 
   .judicial-aside__list {
