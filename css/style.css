@@ -1094,6 +1094,11 @@ button:active {
   font-weight: 700;
 }
 
+.about__acent {
+  color: var(--red);
+  font-style: italic;
+}
+
 .advantages__wrapper {
   display: flex;
   align-items: center;
@@ -2092,7 +2097,7 @@ button:active {
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 20px;
-  border-bottom: 0.5px solid var(--red);
+  border-bottom: 2.5px solid var(--red);
   margin-right: -15px;
   padding-right: 15px;
 }
