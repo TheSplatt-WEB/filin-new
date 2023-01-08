@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
   --white: #ffffff;
   --black: #000000;
@@ -506,6 +508,78 @@ button:active {
   to {
     transform: scale(1);
   }
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+  0%, 100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #e0e0e0;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 999999;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: var(--red);
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
 }
 
 .social__list {
@@ -1262,6 +1336,11 @@ button:active {
   transition: color 0.4s;
 }
 
+.practice__link .practice__quantity,
+.practice__link .practice__text {
+  pointer-events: none;
+}
+
 .practice__link::before {
   content: "";
   position: absolute;
@@ -1272,6 +1351,7 @@ button:active {
   width: 1px;
   background-color: var(--red);
   transition: width 0.4s;
+  pointer-events: none;
 }
 
 .practice__link::after {
@@ -1286,6 +1366,7 @@ button:active {
           mask: url("../images/sprite.svg#arrows-right") center/cover no-repeat;
   background-color: var(--white);
   transition: right 0.4s;
+  pointer-events: none;
 }
 
 .practice__quantity {
