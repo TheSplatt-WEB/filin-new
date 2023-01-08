@@ -1166,6 +1166,14 @@ body {
   font-weight: 700;
 }
 
+.about__accent {
+  background-color: var(--red);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 4px;
+  border-radius: 0 6px 6px 0;
+}
+
 .about__descr {
   font-size: 12px;
   font-style: italic;
