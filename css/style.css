@@ -359,6 +359,7 @@ body {
   position: relative;
   height: 100%;
   background-color: var(--white);
+  overflow-x: hidden;
 }
 
 body *::-moz-selection {
@@ -2284,6 +2285,11 @@ body {
 }
 
 .case__wrapper {
+  border-top: 2.5px solid var(--red);
+  border-bottom: 2.5px solid var(--red);
+}
+
+.case__wrapper-container {
   display: flex;
 }
 
@@ -2296,12 +2302,12 @@ body {
   padding-top: 15px;
   padding-right: 15px;
   padding-bottom: 15px;
-  border-top: 2.5px solid var(--red);
   border-bottom: 2.5px solid var(--red);
 }
 
 .case__inner {
   padding-right: 15px;
+  padding-bottom: 15px;
   background-size: contain;
   background-position: top center;
 }
@@ -2426,8 +2432,19 @@ body {
 
 .case__sidebar {
   flex: 1 0 330px;
-  border-top: 2.5px solid var(--red);
   border-left: 2.5px solid var(--red);
+  position: relative;
+  background-color: #f6f6f6;
+}
+
+.case__sidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #f6f6f6;
+  width: calc((100vw - 1216px) / 2);
+  right: calc((-100vw + 1216px) / 2);
 }
 
 .case-info__name {
@@ -2488,8 +2505,11 @@ body {
 
 .case-sidebar__link {
   font-size: 14px;
-  transition: color 0.3s;
   display: block;
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s;
 }
 
 .case-sidebar__text {
@@ -2504,8 +2524,11 @@ body {
 .case-sidebar__text:last-child {
   border-top: 2.5px solid var(--red);
   margin-left: -15px;
+  margin-right: -15px;
   padding-top: 15px;
+  padding-right: 15px;
   padding-left: 15px;
+  padding-bottom: 15px;
 }
 
 .case-sidebar__text a {
@@ -2956,6 +2979,10 @@ body {
 
   .map {
     width: calc(100vw - 320px);
+  }
+
+  .case__sidebar::after {
+    display: none;
   }
 
   .case__sidebar {
@@ -3483,8 +3510,15 @@ body {
     border-color: var(--red);
   }
 
-  .case__wrapper {
+  .case__wrapper-container {
     flex-direction: column;
+  }
+
+  .case__info {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .case__slider {
@@ -3503,11 +3537,21 @@ body {
     flex: 1 1 auto;
     margin: 0;
     border-left: none;
+    border-top: 2.5px solid var(--red);
+    background-color: transparent;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .case-sidebar__wrapper {
     border-top: none;
     padding-left: 0;
+  }
+
+  .case-sidebar__text:last-child {
+    background-color: #f6f6f6;
   }
 
   .footer__body {
@@ -3920,7 +3964,7 @@ body {
   }
 
   .case-sidebar__link:hover {
-    color: var(--red);
+    text-decoration-color: var(--red);
   }
 
   .case-sidebar__text a:hover {
