@@ -2400,6 +2400,10 @@ body {
   justify-content: center;
 }
 
+.case__image-box picture {
+  pointer-events: none;
+}
+
 .case__img {
   width: 100%;
   -o-object-fit: contain;
