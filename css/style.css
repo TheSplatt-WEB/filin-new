@@ -2345,6 +2345,19 @@ body {
   min-width: 0;
 }
 
+.case__text ul:not([class]) {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.case__text ul:not([class]) li {
+  list-style: inside;
+}
+
+.case__text p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .case__text a {
   text-decoration: underline;
   text-decoration-color: transparent;
@@ -2353,14 +2366,15 @@ body {
   color: var(--red);
 }
 
-.case__descr:not(:last-child) {
-  margin-bottom: 10px;
-}
-
 .case__image {
   width: 100%;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.case__image--small {
+  max-width: 300px;
+  margin: 0 auto 15px;
 }
 
 .case__video {
