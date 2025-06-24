@@ -1307,11 +1307,12 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 .reviews__title {
   margin-right: 15px;
+  margin-bottom: 0;
 }
 
 .reviews__body {
@@ -1400,7 +1401,7 @@ body {
 }
 
 .resources__img {
-  height: calc(25px + 15 * ((100vw - 320px) / 1600));
+  height: 32px;
 }
 
 .contacts {
@@ -3033,6 +3034,10 @@ body {
 
   .practice--page .practice__wrapper {
     display: block;
+  }
+
+  .resources__img {
+    height: 24px;
   }
 
   .contacts {
