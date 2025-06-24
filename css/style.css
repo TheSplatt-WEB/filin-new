@@ -1063,13 +1063,21 @@ body {
   font-weight: 600;
 }
 
+.about__text {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
 .about__text i {
+  margin-top: -3px;
   background-color: var(--white);
   padding: 0 3px;
   border-radius: 3px;
   font-size: 18px;
   color: var(--red);
   font-weight: 600;
+  flex-shrink: 0;
 }
 
 .about__text span {
