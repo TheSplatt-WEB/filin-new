@@ -1156,6 +1156,7 @@ body {
 .advantages__item-title {
   font-weight: 600;
   color: var(--red);
+  margin-bottom: 8px;
 }
 
 .advantages__descr span {
