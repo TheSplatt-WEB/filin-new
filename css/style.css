@@ -17,7 +17,7 @@
   font-style: normal;
   font-weight: 300 700;
   font-stretch: 100%;
-  src: local("Roboto-VariableFont_wdth,wght"), url("../../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
+  src: local("Roboto-VariableFont_wdth,wght"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
 }
 
 /**
