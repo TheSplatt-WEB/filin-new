@@ -961,7 +961,7 @@ body {
   gap: 8px;
   padding: 24px;
   background-color: var(--white);
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .sections__link {
