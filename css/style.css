@@ -3551,6 +3551,10 @@ body {
     max-width: none;
   }
 
+  .packages-slider__image-box picture {
+    height: 100%;
+  }
+
   .packages-slider__img {
     width: auto;
     height: 100%;
