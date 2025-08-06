@@ -1071,6 +1071,10 @@ body {
   position: relative;
 }
 
+.practice__image-box {
+  flex-shrink: 0;
+}
+
 .practice__img {
   -o-object-fit: contain;
      object-fit: contain;
@@ -1691,6 +1695,18 @@ body {
   border-radius: 6px;
   height: 100%;
   transition: background-color 0.3s;
+}
+
+.sections__link::after {
+  content: "";
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+  -webkit-mask: url("../images/sprite.svg#open") center/cover no-repeat;
+          mask: url("../images/sprite.svg#open") center/cover no-repeat;
+  background-color: var(--gray-300);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .sections__link:active {
@@ -3093,9 +3109,14 @@ body {
     font-size: 16px;
   }
 
-  .practice__img {
+  .practice__image-box {
     height: 320px;
     width: 320px;
+  }
+
+  .practice__img {
+    width: 100%;
+    height: 100%;
   }
 
   .practice-quote {
@@ -3192,7 +3213,7 @@ body {
   }
 
   .packages-slider__info {
-    padding-right: 40px;
+    padding-right: 48px;
   }
 
   .packages-slider__btn {
@@ -3231,10 +3252,6 @@ body {
 }
 
 @media (max-width: 767.98px) {
-  .title--center {
-    text-align: left;
-  }
-
   .header__container {
     height: 42px;
     padding-left: 105px;
@@ -3289,11 +3306,15 @@ body {
     gap: 0;
   }
 
-  .practice__img {
-    border-radius: 50%;
+  .practice__image-box {
     height: 180px;
     width: 180px;
     margin-right: -100px;
+    z-index: 1;
+  }
+
+  .practice__img {
+    border-radius: 50%;
     z-index: 1;
     background-color: var(--gray-100);
   }
@@ -3358,6 +3379,10 @@ body {
   .services {
     padding-bottom: 50px;
     margin-bottom: 50px;
+  }
+
+  .services-card__list {
+    padding: 16px;
   }
 
   .packages {
@@ -3615,11 +3640,15 @@ body {
     align-items: center;
   }
 
+  .practice__image-box {
+    width: 280px;
+    height: 280px;
+    margin-right: 0;
+  }
+
   .practice__img {
     background-color: transparent;
     border-radius: 0px;
-    width: 280px;
-    height: 280px;
     margin-right: 0;
   }
 
@@ -3729,18 +3758,6 @@ body {
 
   .services-card__link:hover {
     background-color: var(--red-600);
-  }
-
-  .sections__link[href]::after {
-    content: "";
-    margin-left: auto;
-    width: 16px;
-    height: 16px;
-    -webkit-mask: url("../images/sprite.svg#open") center/cover no-repeat;
-            mask: url("../images/sprite.svg#open") center/cover no-repeat;
-    background-color: var(--gray-300);
-    opacity: 0;
-    transition: opacity 0.3s;
   }
 
   .sections__link[href]:hover {
@@ -3857,6 +3874,10 @@ body {
 
   .packages-images {
     display: none;
+  }
+
+  .sections__link[href]::after {
+    opacity: 1;
   }
 
   .judicial-practice__more {
