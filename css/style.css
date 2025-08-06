@@ -1445,7 +1445,7 @@ body {
   gap: 48px;
 }
 
-.services__item {
+.services__inner {
   display: flex;
   flex-direction: column;
   gap: 16px;
