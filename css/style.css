@@ -1477,7 +1477,7 @@ body {
 }
 
 .services-card {
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: var(--white);
   padding-bottom: 32px;
 }
