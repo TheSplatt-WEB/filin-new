@@ -1483,7 +1483,7 @@ body {
 }
 
 .services-card__title {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .services-card__list {
@@ -2500,7 +2500,7 @@ body {
   }
 
   .services-card__title {
-    margin-bottom: calc(0px + 20 * ((100vw - 320px) / 1600));
+    margin-bottom: calc(4px + 20 * ((100vw - 320px) / 1600));
   }
 
   .judicial-practice__title {
