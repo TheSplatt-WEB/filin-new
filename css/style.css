@@ -2605,6 +2605,7 @@ body {
   flex-direction: column;
   gap: 24px;
   min-height: 0;
+  padding-right: 100px;
 }
 
 .packages-slider__info ul:not([class]) {
@@ -2936,10 +2937,6 @@ body {
   .case__sidebar {
     flex: 1 0 300px;
   }
-
-  .packages-slider__info {
-    padding-right: 64px;
-  }
 }
 
 @media (max-width: 991.98px) {
@@ -3207,8 +3204,13 @@ body {
     width: 15px;
   }
 
+  .packages-slider__btn--prev {
+    left: 16px;
+  }
+
   .packages-slider__btn--next {
     padding-left: 40px;
+    right: 16px;
   }
 
   .packages-slider__btn--next::after {
