@@ -3702,6 +3702,10 @@ body {
     padding: 15px 0;
   }
 
+  .packages-slider__image-box {
+    height: 240px;
+  }
+
   .packages-slider__close {
     top: 8px;
     right: 8px;
