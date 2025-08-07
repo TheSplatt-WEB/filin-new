@@ -1103,12 +1103,12 @@ body {
 .advantages__item {
   position: relative;
   font-size: 14px;
-  font-weight: 320;
+  font-weight: 380;
   transition: transform 0.3s;
 }
 
 .advantages__item b {
-  font-weight: 320;
+  font-weight: 380;
   text-decoration: underline;
 }
 
