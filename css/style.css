@@ -3364,6 +3364,7 @@ body {
     padding: 8px;
     min-height: 44px;
     pointer-events: none;
+    text-align: center;
   }
 }
 
