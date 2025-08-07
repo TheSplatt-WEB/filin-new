@@ -1977,8 +1977,8 @@ body {
   height: 100%;
   background-color: var(--white);
   padding: 8px;
+  padding-bottom: 16px;
   border-radius: 8px;
-  text-align: center;
   transition: box-shadow 0.3s;
   position: relative;
 }
@@ -2030,6 +2030,7 @@ body {
   font-weight: 320;
   font-size: 11px;
   flex-grow: 1;
+  padding: 0 16px;
 }
 
 .case__title {
@@ -3364,7 +3365,6 @@ body {
     padding: 8px;
     min-height: 44px;
     pointer-events: none;
-    text-align: center;
   }
 }
 
