@@ -3241,6 +3241,10 @@ body {
     display: none;
   }
 
+  .services-card__list {
+    gap: 16px;
+  }
+
   .packages-images {
     display: none;
   }
@@ -3491,6 +3495,7 @@ body {
 
   .services-card__list {
     padding: 16px;
+    gap: 12px;
   }
 
   .packages {
@@ -3975,7 +3980,7 @@ body {
   }
 
   .packages-slider__btn:hover {
-    --color-btn: var(--gray-600);
+    --color-btn: var(--red-600);
   }
 
   .packages-slider__close:hover {
