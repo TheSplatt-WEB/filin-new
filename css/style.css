@@ -11,6 +11,8 @@
   --red: #a1273c;
   --red-600: #8f1b2e;
   --green: #006D3C;
+  --box-shadow: 0px 16.7908px 29.2013px rgba(0, 0, 0, 0.0896976),
+                0px 3.99607px 6.94968px rgba(0, 0, 0, 0.0576822);
 }
 
 @font-face {
@@ -1948,143 +1950,82 @@ body {
 }
 
 .judicial-practice {
-  padding-bottom: 50px;
+  padding-bottom: 70px;
+  background-color: var(--gray-100);
+  margin-bottom: 70px;
 }
 
-.judicial-practice__title {
-  margin-bottom: 30px;
-  font-size: 18px;
-  text-align: right;
-}
-
-.judicial-practice__wrapper {
-  display: flex;
-  position: relative;
-}
-
-.judicial-practice__wrapper::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 3px;
-  border-top: 2.5px solid var(--red);
-}
-
-.judicial-practice__content {
-  flex: 1 1 auto;
-  position: relative;
-  padding-top: 45px;
-}
-
-.judicial-practice__tab {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 45px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.3s;
-}
-
-.judicial-practice__tab.active {
-  opacity: 1;
-  pointer-events: all;
-  position: static;
+.judicial-practice .services {
+  padding-bottom: 0;
+  margin-bottom: 32px;
 }
 
 .judicial-practice__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  gap: 16px;
 }
 
-.judicial-practice__item {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 0 0 10px 0;
-  box-shadow: inset 0 0 0 100vh rgba(0, 0, 0, 0.4);
+.judicial-practice__link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  background-color: var(--white);
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+  position: relative;
+}
+
+.judicial-practice__link::before,
+.judicial-practice__link::after {
+  content: "";
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.judicial-practice__link::before {
+  background-color: var(--red);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.judicial-practice__link::after {
+  -webkit-mask: url("../images/sprite.svg#open") center/cover no-repeat;
+          mask: url("../images/sprite.svg#open") center/cover no-repeat;
+  background-color: var(--white);
+  z-index: 2;
+}
+
+.judicial-practice__image-box {
+  border-radius: 6px;
   overflow: hidden;
   position: relative;
 }
 
-.judicial-practice__item::before,
-.judicial-practice__item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.judicial-practice__item::before {
-  height: 3px;
-  width: 100%;
-  border-top: 2.5px solid var(--red);
-}
-
-.judicial-practice__item::after {
-  height: 100%;
-  width: 3px;
-  border-left: 2.5px solid var(--red);
-}
-
-.judicial-practice__link {
-  display: block;
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%;
-  color: var(--gray-200);
-}
-
-.judicial-practice__body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 50px;
-}
-
-.judicial-practice__more {
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 50px;
-  color: var(--white);
-  background-color: var(--red);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  transition: bottom 0.3s;
-}
-
-.judicial-practice__more::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  -webkit-mask: url("../images/sprite.svg#arrows-right") center/cover no-repeat;
-          mask: url("../images/sprite.svg#arrows-right") center/cover no-repeat;
-  background-color: var(--white);
-}
-
 .judicial-practice__name {
-  margin-bottom: auto;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 6px;
+  padding: 8px;
+  color: var(--white);
+  font-size: 11px;
 }
 
 .judicial-practice__descr {
-  font-style: italic;
-  font-weight: 300;
-  font-size: 14px;
+  font-weight: 320;
+  font-size: 11px;
+  flex-grow: 1;
 }
 
 .judicial-aside {
@@ -3129,10 +3070,6 @@ body {
     height: calc(32px + 8 * ((100vw - 320px) / 1600));
   }
 
-  .judicial-practice__title {
-    font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
-  }
-
   .judicial-aside__btn {
     font-size: calc(11px + 3 * ((100vw - 320px) / 1600));
   }
@@ -3643,12 +3580,9 @@ body {
     padding: 12px;
   }
 
-  .judicial-practice__wrapper {
-    display: block;
-  }
-
-  .judicial-practice__content {
-    padding-top: 0;
+  .judicial-practice {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 
   .judicial-aside {
@@ -4039,8 +3973,13 @@ body {
     opacity: 1;
   }
 
-  .judicial-practice__link:hover .judicial-practice__more {
-    bottom: -1px;
+  .judicial-practice__link:hover {
+    box-shadow: var(--box-shadow);
+  }
+
+  .judicial-practice__link:hover::after,
+  .judicial-practice__link:hover::before {
+    opacity: 1;
   }
 
   .judicial-aside__btn:hover::before {
@@ -4136,9 +4075,5 @@ body {
 
   .sections__link[href]::after {
     opacity: 1;
-  }
-
-  .judicial-practice__more {
-    bottom: 0;
   }
 }
