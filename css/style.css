@@ -1960,6 +1960,10 @@ body {
   margin-bottom: 32px;
 }
 
+.judicial-practice__title {
+  max-width: 640px;
+}
+
 .judicial-practice__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -2026,62 +2030,6 @@ body {
   font-weight: 320;
   font-size: 11px;
   flex-grow: 1;
-}
-
-.judicial-aside {
-  width: 330px;
-  flex: 0 0 330px;
-  padding-right: 15px;
-  margin-right: 15px;
-  position: relative;
-}
-
-.judicial-aside::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  right: 0;
-  width: 3px;
-  height: calc(100% - 30px);
-  border-right: 2.5px solid var(--red);
-}
-
-.judicial-aside__title {
-  font-weight: 600;
-  margin-bottom: 20px;
-  margin-right: -15px;
-  padding-right: 15px;
-}
-
-.judicial-aside__item:not(:last-child) {
-  margin-bottom: 15px;
-}
-
-.judicial-aside__btn {
-  text-align: left;
-  font-size: 14px;
-  line-height: 1;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.judicial-aside__btn span {
-  pointer-events: none;
-}
-
-.judicial-aside__btn.active {
-  color: var(--red);
-}
-
-.judicial-aside__btn::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 0;
-  border-bottom: 0.5px solid var(--red);
-  transition: width 0.3s;
 }
 
 .case__title {
@@ -2946,16 +2894,6 @@ body {
 }
 
 @media (min-width: 767.98px) {
-  .judicial-aside__btn span {
-    display: block;
-    display: -webkit-box;
-    overflow: hidden;
-    line-clamp: 1;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-  }
-
   .packages-slider__btn-text {
     display: none;
   }
@@ -3068,10 +3006,6 @@ body {
 
   .sections__image {
     height: calc(32px + 8 * ((100vw - 320px) / 1600));
-  }
-
-  .judicial-aside__btn {
-    font-size: calc(11px + 3 * ((100vw - 320px) / 1600));
   }
 
   .case__title {
@@ -3585,55 +3519,6 @@ body {
     margin-bottom: 50px;
   }
 
-  .judicial-aside {
-    width: auto;
-    padding-right: 0;
-    margin-right: 0;
-  }
-
-  .judicial-aside::before {
-    display: none;
-  }
-
-  .judicial-aside__title {
-    padding-right: 0;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0 auto 20px;
-  }
-
-  .judicial-aside__list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2px;
-    margin-bottom: 15px;
-  }
-
-  .judicial-aside__item:not(:last-child) {
-    margin-bottom: 0;
-  }
-
-  .judicial-aside__item {
-    flex: 1 0 80px;
-  }
-
-  .judicial-aside__btn {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding: 8px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--gray-200);
-    border: 1px solid transparent;
-    border-bottom: 3px solid var(--red);
-  }
-
-  .judicial-aside__btn.active {
-    background-color: var(--white);
-    border-color: var(--red);
-  }
-
   .case__wrapper-container {
     flex-direction: column;
   }
@@ -3980,10 +3865,6 @@ body {
   .judicial-practice__link:hover::after,
   .judicial-practice__link:hover::before {
     opacity: 1;
-  }
-
-  .judicial-aside__btn:hover::before {
-    width: 100%;
   }
 
   .case__text a:hover {
