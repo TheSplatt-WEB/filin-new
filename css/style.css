@@ -1808,6 +1808,10 @@ body {
   background-color: var(--gray-200);
 }
 
+.sections__link picture {
+  flex-shrink: 0;
+}
+
 .sections__image {
   width: 40px;
   height: 40px;
