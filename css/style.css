@@ -1738,6 +1738,10 @@ body {
   opacity: 1;
 }
 
+.packages__text {
+  pointer-events: none;
+}
+
 .packages-images {
   max-width: 400px;
   width: 100%;
