@@ -1108,7 +1108,8 @@ body {
 }
 
 .advantages__item b {
-  font-weight: 500;
+  font-weight: 320;
+  text-decoration: underline;
 }
 
 .advantages__item:not(:last-child) {
