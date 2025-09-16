@@ -469,6 +469,11 @@ b {
   background-color: var(--gray-300);
 }
 
+.icon-blank--dark::after {
+  background-color: currentColor;
+  vertical-align: top;
+}
+
 .info-icon {
   cursor: help;
   display: inline-block;
@@ -1639,10 +1644,6 @@ body {
   display: flex;
 }
 
-.services-card__title {
-  margin-bottom: 24px;
-}
-
 .services-card__list {
   padding: 32px;
   display: flex;
@@ -2008,10 +2009,6 @@ body {
   transition: opacity 0.3s;
 }
 
-.sections__link:active {
-  background-color: var(--gray-200);
-}
-
 .sections__link picture {
   flex-shrink: 0;
 }
@@ -2321,10 +2318,6 @@ body {
 
 .case-info__name {
   font-weight: 560;
-}
-
-.case-info__meaning {
-  font-size: 14px;
 }
 
 .case-info__meaning-text {
@@ -3055,10 +3048,6 @@ body {
 
   .practice--page .practice__title {
     margin-bottom: calc(20px + 20 * ((100vw - 320px) / 1600));
-  }
-
-  .services-card__title {
-    margin-bottom: calc(4px + 20 * ((100vw - 320px) / 1600));
   }
 
   .tariffs__wrapper {
@@ -3862,6 +3851,10 @@ body {
     background-color: var(--white);
   }
 
+  .icon-blank--dark:hover::after {
+    background-color: var(--red);
+  }
+
   .to-main__close:hover {
     background-color: var(--red);
   }
@@ -3924,6 +3917,10 @@ body {
 
   .sections__link[href]:hover::after {
     opacity: 1;
+  }
+
+  .sections__link[href]:active {
+    background-color: var(--gray-200);
   }
 
   .judicial-practice__link:hover {
