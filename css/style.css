@@ -2111,7 +2111,7 @@ body {
 }
 
 .case__item:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .case__accent {
@@ -3277,16 +3277,13 @@ body {
     display: none;
   }
 
-  .case__item:not(:last-child) {
-    margin-bottom: 0;
-  }
-
   .case__item {
     flex-direction: column;
   }
 
   .case__accent {
     flex: 0 0 auto;
+    margin-bottom: 4px;
   }
 
   .case__sidebar {
