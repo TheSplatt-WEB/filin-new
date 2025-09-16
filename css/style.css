@@ -1023,6 +1023,12 @@ body {
   margin-bottom: 50px;
 }
 
+.about-us__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .about-us__list {
   display: flex;
   flex-wrap: wrap;
@@ -1515,6 +1521,7 @@ body {
   padding-bottom: 70px;
   margin-top: -60px;
   margin-bottom: 70px;
+  /* migrated to standalone block .services-item-bottom */
 }
 
 .services--no-first {
@@ -1571,16 +1578,54 @@ body {
   font-weight: 420;
 }
 
-.services__item-footnote {
+/* New standalone block replacing .services__item-bottom */
+
+.services-item-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--gray-600);
+  font-size: 11px;
+  border-radius: 8px;
+  background-color: var(--white);
+  padding: 16px;
+  padding-left: 48px;
+  text-align: left;
+  position: relative;
+}
+
+.services-item-bottom::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 12px;
+  -webkit-mask: url("../images/sprite.svg#info") center/cover no-repeat;
+          mask: url("../images/sprite.svg#info") center/cover no-repeat;
+  background-color: var(--green);
+  width: 24px;
+  height: 24px;
+}
+
+.services-item-bottom--gray {
+  background-color: var(--gray-100);
+}
+
+.services-item-bottom .link {
+  text-decoration: underline;
+  font-weight: 420;
+}
+
+.services-item-bottom__footnote {
   margin: 12px 0;
 }
 
-.services__item-footnote .services-card__desc {
+.services-item-bottom__footnote .services-item-bottom__desc {
   display: flex;
   gap: 4px;
 }
 
-.services__item-footnote .services-card__desc span {
+.services-item-bottom__footnote .services-item-bottom__desc span {
   color: var(--red);
   flex-shrink: 0;
 }
