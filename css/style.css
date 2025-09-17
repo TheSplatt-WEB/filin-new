@@ -1164,6 +1164,20 @@ body {
   background-color: var(--gray-200);
 }
 
+.practice--light {
+  background-color: var(--gray-100);
+}
+
+.practice--light .practice-quote__box::before,
+.practice--light .practice-quote__box::after {
+  border-color: var(--gray-300);
+}
+
+.practice--light .practice-quote__left-box,
+.practice--light .practice-quote__right-box {
+  background-color: var(--gray-300);
+}
+
 .practice--page .practice__title {
   margin-bottom: 40px;
 }
@@ -1531,6 +1545,10 @@ body {
 
 .services--no-first {
   margin-top: 0;
+}
+
+.services--no-margin {
+  margin-bottom: 0;
 }
 
 .services__wrapper {
@@ -2034,7 +2052,6 @@ body {
 .judicial-practice {
   padding-bottom: 70px;
   background-color: var(--gray-100);
-  margin-bottom: 70px;
 }
 
 .judicial-practice .services {
@@ -3552,6 +3569,10 @@ body {
     margin-bottom: 50px;
   }
 
+  .services--no-margin {
+    margin-bottom: 0;
+  }
+
   .services-card__list {
     padding: 16px;
     gap: 12px;
@@ -3571,7 +3592,6 @@ body {
 
   .judicial-practice {
     padding-bottom: 50px;
-    margin-bottom: 50px;
   }
 
   .case__wrapper-container {
