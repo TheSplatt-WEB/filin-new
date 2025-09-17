@@ -406,6 +406,8 @@ b {
 
 .main {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .sr-only {
@@ -954,6 +956,7 @@ body {
 
 .top--error {
   margin-bottom: 0;
+  flex-grow: 1;
 }
 
 .top--page {
@@ -990,6 +993,11 @@ body {
   padding: 10px 30px;
   text-transform: uppercase;
   transition: color 0.3s, background-color 0.3s;
+}
+
+.top__descr {
+  font-size: 24px;
+  font-weight: 460;
 }
 
 .statistics__list {
@@ -3059,6 +3067,10 @@ body {
     line-height: calc(36px + 24 * ((100vw - 320px) / 1600));
   }
 
+  .top__descr {
+    font-size: calc(14px + 10 * ((100vw - 320px) / 1600));
+  }
+
   .about-us__item-title {
     font-size: calc(16px + 6 * ((100vw - 320px) / 1600));
   }
@@ -3264,11 +3276,7 @@ body {
     width: 100%;
   }
 
-  .top--error {
-    margin-bottom: calc(110px + 200 * ((100vw - 320px) / 1600));
-  }
-
-  .top {
+  .top:not(.top--error) {
     padding-top: 64px;
   }
 
@@ -3449,7 +3457,7 @@ body {
     width: 80px;
   }
 
-  .top {
+  .top:not(.top--error) {
     padding-top: 42px;
   }
 
